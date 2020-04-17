@@ -1,11 +1,10 @@
 /*
 COLOR PALETTE
-https://coolors.co/f7fff7-343434-2f3061-ffe66d-a1c6d7
-#F7FFF7 - almost white
-#343434 - dark gray - almost black
-#2F3061 - blue dark
-#FFE66D - yellow
-#A1C6D7 - blue light
+#EEF0F2 - almost white
+#0B2027 - dark gray - green
+#475B5A - khaki
+#5D737E - grey-blue
+#64B6AC - turq
 */
 
 
@@ -15,7 +14,7 @@ html {
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
   line-height: 1.5rem;
-  padding: 50px 50px 50px 50px;
+  /* padding: 50px 50px 50px 50px; */
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -36,6 +35,90 @@ li{
   font-size: 15px;
   line-height: 2rem;
 }
+
+a {
+  color: #64B6AC;
+}
+
+
+/* Background colour & images
+------------------------------------*/
+.banner {
+  background-image: url(../images/background-mock.jpg);
+  background-size: cover;
+  background-position: top right;
+  /* margin: 0 !important; */
+  /* padding: 0 !important; */
+}
+
+.banner img{
+display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 20%;
+ padding: 100px 0px 100px 0px;
+
+}
+
+/* Jump to section/nav
+------------------------------------*/
+nav{
+  width: 100vw;
+}
+
+.jump-to {
+  overflow: hidden;
+  display: flex;
+  padding: 20px 30px 10px 30px;
+
+  /* width: 100%; */
+}
+
+.jump-to ul{
+    color: #0B2027;
+    text-align: center;
+    padding: 14px 10px;
+    font-size: 17px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+}
+
+.jump-to li{
+  display: block;
+  flex: 0 1 auto;
+  /* list-style-type: none; */
+  /* margin: 0 8vw; */
+
+}
+
+.jump-to a{
+  text-decoration: none;
+
+}
+
+.jump-to a:hover{
+  color: #C6E9FF;
+}
+
+/*shows elements in a column*/
+
+@media only screen and (max-width: 500px) {
+  ul{
+    flex-direction: column;
+}
+    li{
+        margin: 0;
+      }
+      a{
+     display: block;
+   }
+  }
 
 /* Contact Form
 ------------------------------------*/
@@ -65,7 +148,7 @@ input[type=text], select, textarea {
 }
 
 input[type=submit] {
-  background-color: #4CAF50;
+  background-color: #475B5A;
   color: white;
   padding: 12px 20px;
   border: none;
