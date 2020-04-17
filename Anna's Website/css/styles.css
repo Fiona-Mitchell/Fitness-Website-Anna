@@ -1,0 +1,86 @@
+/*
+COLOR PALETTE
+https://coolors.co/f7fff7-343434-2f3061-ffe66d-a1c6d7
+#F7FFF7 - almost white
+#343434 - dark gray - almost black
+#2F3061 - blue dark
+#FFE66D - yellow
+#A1C6D7 - blue light
+*/
+
+
+/* Global styles
+------------------------------------*/
+html {
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.5rem;
+  padding: 50px 50px 50px 50px;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+h1{
+  font-size: 25px;
+  font-weight: bold;
+}
+h2{
+  font-size: 18px;
+}
+
+p{
+  font-size: 15px;
+}
+
+li{
+  font-size: 15px;
+  line-height: 2rem;
+}
+
+/* Contact Form
+------------------------------------*/
+
+.contact-form{
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-form h1{
+  text-align: center;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Responsive layout, make the two columns stack on top of each other*/
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
