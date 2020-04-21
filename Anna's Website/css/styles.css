@@ -15,7 +15,7 @@ html {
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
   line-height: 1.5rem;
-  background-color: #177E89;
+  background-color: #EEF0F2;
   /* padding: 50px 50px 50px 50px; */
 }
 *, *:before, *:after {
@@ -63,6 +63,8 @@ body{
 .banner {
   background-image: url(../images/background-mock.jpg);
   background-size: cover;
+  z-index: 1;
+  position: relative;
   /* background-position: top right; */
   /* margin: 0 !important;
   padding: 0 !important; */
@@ -99,7 +101,7 @@ nav{
     align-items: stretch;
     justify-content: space-between;
     list-style-type: none;
-    width: 100%;
+    width: 90%;
     margin: 0;
     padding: 0;
 }
@@ -208,7 +210,7 @@ ul{
 }
 
 .divider{
-  border-bottom: 2px dotted #EEF0F2;
+  border-bottom: 2px dotted #08605F;
   padding: 0 0 50px 0;
   width: 80%;
   margin-left: auto;
@@ -216,7 +218,7 @@ ul{
 }
 
 .divider-intro{
-  border-bottom: 2px dotted #EEF0F2;
+  border-bottom: 2px dotted #08605F;
   padding: 0 0 50px 0;
   width: 80%;
   margin-left: auto;
@@ -264,15 +266,20 @@ ul{
 }
 
 .location{
-  width: 100%;
-  background-color: #EEF0F2;
-  padding: 10px 100px 15px 100px;
+  width: 300px;
+  height: 250px;
+  background-color: rgba(89, 131, 129, 0.3);
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 30px 10px 30px;
+  border-radius: 5px;
+  text-align: center;
 }
 
-.location p{
-  text-align: center;
+li{
+  color: #0F5257;
 }
 
 @media only screen and (min-width: 800px) {
@@ -346,13 +353,35 @@ b {
 
 /* Blog
 ------------------------------------*/
-
-
 .center p{
   text-align: center;
 }
 
+.blog-title{
+  padding: 200px 0 50px 0;
+}
 
+.link-back h1{
+  text-align: left;
+  padding-left: 35px;
+  font-size: 14px;
+  margin-top: -50px;
+}
+
+.blog-post{
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  text-align: justify;
+}
+
+@media screen and (max-width: 800px){
+  .blog-post{
+    width: 80%;
+    padding: 0;
+  }
+
+}
 
 /* Contact Form
 ------------------------------------*/
@@ -360,7 +389,7 @@ b {
 .contact-form{
   box-sizing: border-box;
   border-radius: 8px;
-  background-color: #f2f2f2;
+  background-color: rgba(89, 131, 129, 0.3);
   padding: 10px;
   max-width: 500px;
   margin-left: auto;
@@ -424,7 +453,7 @@ input[type=submit]:hover {
 /* contact info*/
 
 footer{
-  margin-top: 30px;
+  margin-top: 10px;
   padding:20px 0 20px 0;
   text-align: center;
   font-size: 14px;
@@ -433,5 +462,35 @@ footer{
 
 #contactInfo{
   justify-content: space-between;
+
+}
+
+/* social media*/
+.sm-logo {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+    height: auto;
+    padding: 10px 10px 20px 10px;
+}
+
+#social-media-bottom{
+    text-align:center;
+}
+
+#social-media-top{
+    z-index: 2;
+    position: absolute;
+    right:1px;
+}
+
+#link-back{
+  text-align: left;
+}
+
+@media screen and (max-width: 800px){
+
+
 
 }
