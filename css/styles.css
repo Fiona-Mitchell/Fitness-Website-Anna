@@ -88,7 +88,7 @@ nav{
 .jump-to {
   overflow: hidden;
   display: flex;
-  padding: 20px 10px 10px 10px;
+  padding: 30px 10px 30px 10px;
 
   /* width: 100%; */
 }
