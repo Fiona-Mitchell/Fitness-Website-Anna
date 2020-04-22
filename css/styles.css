@@ -88,37 +88,37 @@ nav{
 .jump-to {
   overflow: hidden;
   display: flex;
-  padding: 20px 30px 10px 30px;
+  padding: 20px 10px 10px 10px;
 
   /* width: 100%; */
 }
 
 .jump-to ul{
     text-align: center;
-    padding: 14px 10px;
-    font-size: 17px;
+    /* padding: 14px 10px; */
+    /* font-size: 17px; */
     display: flex;
-    align-items: stretch;
+    /* align-items: stretch; */
     justify-content: space-between;
     list-style-type: none;
-    width: 90%;
+    width: 100%;
     margin: 0;
     padding: 0;
 }
 }
 
 .jump-to li{
-  display: block;
-  flex: 0 1 auto;
+  /* display: block;
+  flex: 0 1 auto; */
   /* list-style-type: none; */
   /* margin: 0 8vw; */
 
 }
 
-.jump-to a{
+/* .jump-to a{
   text-decoration: none;
 
-}
+} */
 
 .jump-to a:hover{
   color: #C6E9FF;
@@ -133,8 +133,8 @@ nav{
     li{
         margin: 0;
       }
-      a{
-     display: block;
+      /* a{
+     display: block; */
    }
   }
 
@@ -491,7 +491,13 @@ footer{
 @media screen and (max-width: 800px){
 
   .sm-logo {
-      padding: 0px 10px 20px 10px;
-  }
+      padding: 20px 10px 20px 10px;
+}
+
+  #social-media-top{
+      display: flex;
+    }
+
+
 
 }
