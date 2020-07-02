@@ -1,6 +1,5 @@
 /*
 COLOR PALETTE
-#EEF0F2 - almost white
 #08605F - forest green
 #598381 - khaki
 #8E937D - grey-green
@@ -11,12 +10,16 @@ COLOR PALETTE
 
 /* Global styles
 ------------------------------------*/
+*, *:after, *::before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 html {
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
   line-height: 1.5rem;
-  background-color: #EEF0F2;
-  /* padding: 50px 50px 50px 50px; */
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -28,22 +31,23 @@ h1{
   text-align: center;
 }
 h2{
-  font-size: 17px;
+  font-size: 18px;
   color: #0F5257;
 }
 
 h3{
-  font-size: 15px;
+  font-size: 16px;
   color: #0F5257;
 }
 
 p{
-  font-size: 14px;
+  font-size: 15px;
   color: #08605F;
 }
 
 li{
   font-size: 15px;
+  font-weight: 800;
   line-height: 2rem;
 }
 
@@ -52,30 +56,73 @@ a {
   text-decoration: none;
 }
 
-
-/* Background colour & images
-------------------------------------*/
 body{
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+}
+
+section{
+  position: relative;
+	padding: 10em;
+  background-color: #c8f7dc;
+}
+
+section::before,
+section::after {
+	position: absolute;
+	content: '';
+	pointer-events: none;
+}
+
+.swoop-1, .swoop-2 {
+	margin-bottom: 90px;
+	padding: 0 10% 7em;
+	border-radius: 0 0 0 90px;
+}
+
+.swoop-1::before,
+.swoop-1::after {
+	left: 0;
+	z-index: -1;
+	height: 100%;
+	background: #c8f7dc;
+}
+
+.swoop-2::before,
+.swoop-2::after {
+	left: 0;
+	z-index: -1;
+	height: 100%;
+	background: #fff;
+}
+
+.swoop-1::before, .swoop-2::before {
+	top: 100%;
+	width: 100%;
+	border-radius: 0 90px 0 0;
+}
+
+.swoop-1::after, .swoop-2::after {
+	bottom: 0;
+	z-index: -1;
+	width: 50%;
 }
 
 .banner {
-  background-image: url(../images/background-mock.jpg);
+  background-image: url(../images/background-mock-2.jpg);
   background-size: cover;
+  height: 250px;
   z-index: 1;
   position: relative;
-  /* background-position: top right; */
-  /* margin: 0 !important;
-  padding: 0 !important; */
 }
 
 .banner img{
-display: block;
- margin-left: auto;
- margin-right: auto;
- width: 20%;
- padding: 100px 0px 100px 0px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+  padding: 75px 0px;
 
 }
 
@@ -89,35 +136,22 @@ nav{
   overflow: hidden;
   display: flex;
   padding: 30px 10px 30px 10px;
-
-  /* width: 100%; */
 }
 
 .jump-to ul{
     text-align: center;
-    /* padding: 14px 10px; */
-    /* font-size: 17px; */
     display: flex;
-    /* align-items: stretch; */
     justify-content: space-between;
     list-style-type: none;
     width: 100%;
     margin: 0;
     padding: 0 20px 0 20px;
 }
-}
-
-.jump-to li{
-  /* display: block;
-  flex: 0 1 auto; */
-  /* list-style-type: none; */
-  /* margin: 0 8vw; */
-
-}
 
 .jump-to a{
   text-decoration: none;
   padding: 0;
+  color: #0F5257;
 
 }
 
@@ -125,117 +159,33 @@ nav{
   color: #C6E9FF;
 }
 
-/*shows elements in a column*/
-
-@media only screen and (max-width: 600px) {
-  ul{
-    flex-direction: column;
-}
-    li{
-        margin: 0;
-      }
-      /* a{
-     display: block; */
-   }
   }
 
   /* Background colour & images
   ------------------------------------*/
 
-  .intro {
-    text-align: center;
-    padding-top: 80px;
-    padding-bottom: 10px;
-    overflow: hidden;
-  }
-
-  .intro p{
-    text-align: justify;
-    padding-left: 10%;
-    padding-right: 55%;
-  }
-
-  .intro img{
-    float: right;
-    padding-left: 50px;
-    /* padding-bottom: 50%; */
-    padding-right: 10%;
-    padding-top: 20px;
-  }
-
-  @media only screen and (min-width: 1000px) {
-    .intro{
-      text-align: justify;
-      padding-left: 15%;
-      padding-right: 15%;
-  }
-    .intro h1{
-      text-align: center;
-      /* padding-left: 20%;
-      padding-right: 20%; */
+.intro {
+  text-align: center;
+  overflow: hidden;
 }
 
-  }
-
-  @media only screen and (max-width: 1000px) {
-    .intro p{
-      padding-left: 10%;
-      padding-right: 10%;
-  }
-    .intro img{
-      width: 300px;
-      display: block;
-      padding-left: 10px;
-      padding-right: 10px;
-      padding-bottom: 20px;
-      float: none;
-      margin-left: auto!important;
-      margin-right: auto!important;
-
-  }
-
-  .intro{
-    text-align: center;
-    padding-top: 20px;
-    overflow: hidden;
-}
+.intro p{
+  text-align: justify;
 }
 
-/* Background colour & images
+.intro img{
+  float: right;
+  height: 400px;
+  padding-left: 50px;
+}
+
+
+/* Services
 ------------------------------------*/
 
 ul{
   line-height: 100px;
   text-align: left;
-  /* padding-left: 100px; */
-}
-
-.divider{
-  border-bottom: 2px dotted #08605F;
-  padding: 0 0 50px 0;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.divider-intro{
-  border-bottom: 2px dotted #08605F;
-  padding: 0 0 50px 0;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50px;
-}
-
-
-/* .divider > section:last-of-type {
-  border-bottom: none;
-} */
-
-/* Service
-------------------------------------*/
-.service{
- width: 80%;
 }
 
 .service h1{
@@ -256,71 +206,19 @@ ul{
 
 .prices{
   text-align: left;
-  padding: 20px 70px 20px 100px;
   box-sizing: content-box;
 }
 
 .prices p{
-  width: 70%;
   text-align: justify;
   text-align: left;
 }
 
 .location{
-  width: 300px;
-  height: 250px;
-  background-color: rgba(89, 131, 129, 0.3);
-  text-align: center;
-  margin-bottom: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px 30px 10px 30px;
-  border-radius: 5px;
-  text-align: center;
 }
 
 li{
   color: #0F5257;
-}
-
-@media only screen and (min-width: 800px) {
-
-  .prices{
-    text-align: left;
-    width: 80%;
-  }
-
-  .prices p{
-    width: 80%;
-  }
-
-}
-
-@media only screen and (max-width: 800px) {
-
-  .prices{
-    padding: 0px 30px 30px 30px;
-  }
-
-  .service{
-    width:100%;
-  }
-
-  ul{
-    padding-left: 30px;
-    padding-bottom: 50px;
-  }
-
-  .location{
-    padding: 10px 30px 10px 30px;
-    border-radius: 5px;
-  }
-
-}
-
-
-b {
-  font-weight: bolder;
 }
 
 /* Lifestyle
@@ -329,37 +227,12 @@ b {
 .lifestyle{
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
-  padding: 40px 0 0 0;
-}
-
-/* .lifestyle img{
-  display: inline-block;
-  width: 20%;
-  align-items: stretch;
-} */
-
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-  margin-left: 0;
-}
-
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
 }
 
 /* Blog
 ------------------------------------*/
 .center p{
   text-align: center;
-}
-
-.blog-title{
-  padding: 200px 0 50px 0;
 }
 
 .link-back h1{
@@ -372,83 +245,13 @@ b {
 .blog-post{
   margin-left: auto;
   margin-right: auto;
-  width: 600px;
   text-align: justify;
 }
 
-@media screen and (max-width: 800px){
-  .blog-post{
-    width: 80%;
-    padding: 0;
-  }
-
-}
-
-/* Contact Form
+/* Contact
 ------------------------------------*/
 
-.contact-form{
-  box-sizing: border-box;
-  border-radius: 8px;
-  background-color: rgba(89, 131, 129, 0.3);
-  padding: 10px;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-  color: #0F5257;
-}
-
 .contact-form h1{
-  text-align: center;
-  font-size: 14px;
-}
-
-label {
-  font-size: 14px;
-}
-
-/* Style inputs */
-input[type=text], input[type=email], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #0F5257;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-  border-radius: 8px;
-  font-size:12px;
-}
-
-input[type=submit] {
-  background-color: #0F5257;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  border-radius: 8px;
-}
-
-input[type=submit]:hover {
-  background-color: #598381;
-}
-
-/* Responsive layout, make the two columns stack on top of each other*/
-@media screen and (max-width: 600px) {
-   input[type=submit] {
-    margin-top: 0;
-  }
-
-  .contact-form{
-    padding-left: 30px;
-    padding-right: 30px;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    color: #0F5257;
-  }
 }
 
 /* contact info*/
@@ -457,7 +260,6 @@ footer{
   padding:10px 0 20px 0;
   text-align: center;
   font-size: 14px;
-  background-color: #EEF0F2;
 }
 
 #contactInfo{
@@ -489,17 +291,36 @@ footer{
   text-align: left;
 }
 
-@media screen and (max-width: 800px){
-
-  .sm-logo {
-      padding: 20px 10px 20px 10px;
-
-}
-
-  #social-media-top{
-      display: flex;
+@media only screen and (max-width: 600px) {
+    ul{
+      flex-direction: column;
     }
+    li{
+        margin: 10px 0;
+      }
+    nav{}
 
+      h1{
+        font-size: 25px;
+      }
+      h2{
+        font-size: 22px;
+        color: #0F5257;
+      }
 
+      h3{
+        font-size: 20px;
+        color: #0F5257;
+      }
 
-}
+      p{
+        font-size: 18px;
+        color: #08605F;
+      }
+
+      .intro img{
+        height: auto;
+        width: 100%;
+        padding: 0 0 50px;
+      }
+   }
