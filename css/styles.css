@@ -52,8 +52,12 @@ li{
 }
 
 a {
-  color: #598381;
+  color: #0F5257;
   text-decoration: none;
+}
+
+a:hover{
+  font-weight: bold;
 }
 
 body{
@@ -156,7 +160,8 @@ nav{
 }
 
 .jump-to a:hover{
-  color: #C6E9FF;
+  color: #9fd9fc;
+  font-weight: 800;
 }
 
   }
