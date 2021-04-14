@@ -39,7 +39,7 @@ h2{
 }
 
 h3{
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 	font-weight: 600;
   color: #0F5257;
 }
@@ -121,6 +121,10 @@ section::after {
 	width: 50%;
 }
 
+.col{
+	padding:0;
+}
+
 .banner {
   background-image: url(../images/background-mock-2.jpg);
   background-size: cover;
@@ -133,7 +137,6 @@ section::after {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 10%;
   padding-top: 50px;
 
 }
@@ -346,5 +349,13 @@ footer{
 
 			section{
 				padding: 1em;
+			}
+			.index-icons{
+				padding: 0px;
+			}
+			.swoop-1, .swoop-2 {
+				margin-bottom: 90px;
+				padding: 0 10vw 7em;
+				border-radius: 0 0 0 90px;
 			}
    }
