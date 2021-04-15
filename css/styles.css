@@ -96,6 +96,10 @@ section::after {
 	text-align: center;
 }
 
+.button a{
+	color: white;
+}
+
 .swoop-1, .swoop-2 {
 	margin-bottom: 90px;
 	padding: 0 20vw 7em;
